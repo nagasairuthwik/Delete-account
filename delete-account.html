@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — UniMind</title>
+  <link rel="stylesheet" href="delete-account.css" />
+</head>
+<body>
+
+  <!-- Form page -->
+  <div class="container" id="formPage">
+    <h1>Delete Your UniMind Account</h1>
+    <p class="subtitle">
+      We’re sorry to see you go. Please submit this form to request permanent deletion of your UniMind account and associated data.
+    </p>
+
+    <form onsubmit="handleDelete(event)">
+      <label for="name">Full name</label>
+      <input type="text" id="name" name="name" autocomplete="name" required />
+
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" autocomplete="email" required />
+
+      <label for="phone">Phone number (optional)</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" />
+
+      <label for="reason">Reason (optional)</label>
+      <textarea id="reason" name="reason" placeholder="Tell us why you’re leaving — it helps us improve."></textarea>
+
+      <button type="submit" class="delete-btn">Request account deletion</button>
+    </form>
+  </div>
+
+  <!-- Success page -->
+  <div class="success-page" id="successPage">
+    <h1>Your UniMind account deletion request has been received.</h1>
+    <p>Our team will review and process it within <strong>3–5 working days</strong>. You may receive a confirmation email at the address you provided.</p>
+  </div>
+
+  <script>
+    function handleDelete(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value.trim();
+      var email = document.getElementById("email").value.trim();
+
+      if (!name || !email) {
+        alert("Please fill in your full name and email address.");
+        return;
+      }
+
+      document.getElementById("formPage").style.display = "none";
+      document.getElementById("successPage").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
