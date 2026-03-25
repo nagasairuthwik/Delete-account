@@ -1,0 +1,100 @@
+/* UniMind — Delete account page */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+/* Form page */
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.delete-btn {
+  margin-top: 20px;
+  padding: 12px;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
+
+/* Success page */
+.success-page {
+  display: none;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.success-page h1 {
+  color: #1a73e8;
+  font-size: 1.5rem;
+  max-width: 560px;
+}
+
+.success-page p {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 24px 16px;
+    padding: 20px;
+  }
+}
